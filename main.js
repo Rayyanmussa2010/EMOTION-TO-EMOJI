@@ -37,7 +37,7 @@ console.error(error);
 else{
 console.log(results);
 document.getElementById("result_emotion_name1").innerHTML=results[0].label;
-document.getElementById("result_emotion_name2").iinerHTML=results[1].label;
+document.getElementById("result_emotion_name2").innerHTML=results[1].label;
 Prediction1=results[0].label
 Prediction2=results[1].label
 speak();
@@ -53,7 +53,10 @@ if(results[0].label == "Happy")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128548;";
     }
-
+  if(results[0].label == "Crying")
+    {
+	    document.getElementById("update_emoji").innerHTML = "&#128546;";
+    }
     if(results[1].label == "Happy")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128522;";
@@ -65,6 +68,10 @@ if(results[0].label == "Happy")
     if(results[1].label == "Angry")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128548;";
+    }
+if(results[1].label == "Crying")
+    {
+	    document.getElementById("update_emoji2").innerHTML = "&#128546;";
     }
 }
 }
